@@ -128,7 +128,7 @@ async def on_guild_join(guild:discord.Guild):
 
 # Error-Events
 
-@client.event                  
+@bot.event                  
 async def on_command_error(ctx, error):
     if len(error.args) == 1:
         error = error.args
