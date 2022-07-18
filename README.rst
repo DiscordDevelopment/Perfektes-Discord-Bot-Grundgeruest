@@ -22,20 +22,8 @@ discord.py
 
 To install the development version, do the following:
 
-Windows:
 .. code:: sh
 
     $ git clone https://github.com/Rapptz/discord.py
-    
     $ cd discord.py
-    
-    $ pip install .[voice]
-
-Linux/MacOs:
-.. code:: sh
-
-    $ git clone https://github.com/Rapptz/discord.py
-    
-    $ cd discord.py
-    
-    $ python3 -m pip install .[voice]
+    $ python3 -m pip install -U .[voice]
