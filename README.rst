@@ -3,7 +3,7 @@
 Wichtige, die man vor dem benutzen beachten sollte:
 ----------
 -  Funktioniert nur im Zusammenhang mit der Discord.py 2.0 alpha bzw. Entwicklungsversion
--  Python 3.6 oder neuer
+-  Python 3.5 oder höhere Version
 -  Discord.py Entwicklungsversion installieren (das hier drunter)
 
 discord.py
