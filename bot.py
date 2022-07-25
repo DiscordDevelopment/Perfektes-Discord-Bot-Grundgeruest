@@ -132,7 +132,7 @@ async def on_guild_join(guild:discord.Guild):
 @bot.event                  
 async def on_command_error(ctx, error):
     if len(error.args) == 1:
-        error = error.args
+        error = str(error.args[0])
     else:
         err=""
         for a in error.args:
@@ -145,7 +145,7 @@ async def on_error(interaction:discord.Interaction, error:discord.app_commands.e
     if isinstance(error,discord.app_commands.errors.CommandNotFound):
         return
     if len(error.args) == 1:
-        error = error.args
+        error = str(error.args[0])
     else:
         err=""
         for a in error.args:
