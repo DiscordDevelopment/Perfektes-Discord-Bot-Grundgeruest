@@ -99,8 +99,9 @@ async def on_ready():
 
 @bot.event
 async def on_ready():
-    loop = asyncio.get_event_loop()
-    loop.create_task(client.start(TOKEN.TOKEN))
+    if not client.is_ready():
+        loop = asyncio.get_event_loop()
+        loop.create_task(client.start(TOKEN.TOKEN))
     print('\rCommand Client online als {}'.format(bot.user))
 
 # Events
