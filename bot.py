@@ -32,7 +32,7 @@ class CustomHelpCommand(commands.HelpCommand):
         b=""
         for command in tree.get_commands():
             command:discord.app_commands.Command
-            b=b+", `\\"+command.name+"`"
+            b=b+", `/"+command.name+"`"
         if b=="":
             b="No Slash Commands"
         emoji=client.get_emoji(TOKEN.slash_emoji)
@@ -204,7 +204,7 @@ async def _help(interaction:discord.Interaction):
     b=""
     for command in tree.get_commands():
         command:discord.app_commands.Command
-        b=b+", `\\"+command.name+"`"
+        b=b+", `/"+command.name+"`"
     if b=="":
         b="No Slash Commands"
     emoji=client.get_emoji(TOKEN.slash_emoji)
