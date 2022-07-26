@@ -32,7 +32,7 @@ class CustomHelpCommand(commands.HelpCommand):
         b=""
         for command in tree.get_commands():
             command:discord.app_commands.Command
-            b=b+", `/"+command.name+"`"
+            b=b+", `\\"+command.name+"`"
         if b=="":
             b="No Slash Commands"
         emoji=client.get_emoji(TOKEN.slash_emoji)
@@ -55,6 +55,7 @@ class CustomHelpCommand(commands.HelpCommand):
         await self.get_destination().send(embed=embed)
 
 intents=discord.Intents.all()
+token=TOKEN.TOKEN
 bot=commands.Bot(command_prefix=get_prefix,intents=intents,help_command=CustomHelpCommand(),case_insensitive=True)
 client=discord.Client(intents=intents)
 tree=app_commands.CommandTree(client)
@@ -101,7 +102,7 @@ async def on_ready():
 async def on_ready():
     if not client.is_ready():
         loop = asyncio.get_event_loop()
-        loop.create_task(client.start(TOKEN.TOKEN))
+        loop.create_task(client.start(token))
     print('\rCommand Client online als {}'.format(bot.user))
 
 # Events
@@ -129,7 +130,7 @@ async def on_guild_join(guild:discord.Guild):
 
 # Error-Events
 
-@bot.event                  
+@client.event
 async def on_command_error(ctx, error):
     if len(error.args) == 1:
         error = str(error.args[0])
@@ -203,7 +204,7 @@ async def _help(interaction:discord.Interaction):
     b=""
     for command in tree.get_commands():
         command:discord.app_commands.Command
-        b=b+", `/"+command.name+"`"
+        b=b+", `\\"+command.name+"`"
     if b=="":
         b="No Slash Commands"
     emoji=client.get_emoji(TOKEN.slash_emoji)
@@ -237,6 +238,8 @@ async def main():
         cogs=[]
         await load_cogs(cogs)
         threading.Thread(target=save_data).start()
-        await bot.start(TOKEN.TOKEN)
+        await bot.start(token)
 
 asyncio.run(main())
+
+# Made by Discord Development
