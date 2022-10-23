@@ -1,5 +1,13 @@
 # Perfektes-Discord-Bot-Grundger-st
 
+!!! OUTDATED !!!
+----------
+----------
+----------
+----------
+----------
+
+
 Wichtige, die man vor dem benutzen beachten sollte:
 ----------
 -  Funktioniert nur im Zusammenhang mit der Discord.py 2.0 alpha bzw. Entwicklungsversion
