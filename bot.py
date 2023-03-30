@@ -229,13 +229,13 @@ def save_data():
 async def load_cogs(cogs):
     for cog in cogs:
         try:
-            await client.add_cog(cog())
+            await bot.add_cog(cog())
         except Exception as e:
             print(e)
 
 async def main():
     async with client:
-        cogs=[]
+        cogs=[Bot]
         await load_cogs(cogs)
         threading.Thread(target=save_data).start()
         await bot.start(token)
