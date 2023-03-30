@@ -17,7 +17,7 @@ class CustomHelpCommand(commands.HelpCommand):
         super().__init__()
 
     async def send_bot_help(self, mapping):
-        embed=discord.Embed(title="__**:information_source: Help Menü :information_source:**__",description="*Willkommen, dies ist das MyTwitch Help Menü.*\n:man_technologist_tone2: | Credits: <@!650664693274247208> \n\n",colour=discord.Colour.dark_theme())
+        embed=discord.Embed(title="__**:information_source: Help Menü :information_source:**__",description="*Willkommen, dies ist das Help Menü da muss noch jemandamal den text abändern bruh.*\n:man_technologist_tone2: | Credits: <@!650664693274247208> \n\n",colour=discord.Colour.dark_theme())
         c=0
         for cog in reversed(mapping):
             b=""
